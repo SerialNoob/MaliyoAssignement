@@ -46,7 +46,7 @@ public class DanfoControler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        this.transform.position=Vector3.Lerp(this.transform.position, m_positions[m_targetPositionIdx], Time.deltaTime*(m_speed*m_speedramp.Evaluate(m_rampTime)));
+        this.transform.position=Vector3.Lerp(this.transform.position, m_positions[m_targetPositionIdx], Time.deltaTime*(Globals.SPEED/2)*m_speedramp.Evaluate(m_rampTime));
         m_rampTime+=Time.deltaTime;
 
         m_targetPositionIdx=Convert.ToInt16(Input.GetMouseButton(0));
