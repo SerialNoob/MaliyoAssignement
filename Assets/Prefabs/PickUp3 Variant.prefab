@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1246710768719595487
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 165294806051451506, guid: e431ba61068fa674782ee7205e0de2bd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 165294806051451506, guid: e431ba61068fa674782ee7205e0de2bd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 823656311548461507, guid: e431ba61068fa674782ee7205e0de2bd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 823656311548461507, guid: e431ba61068fa674782ee7205e0de2bd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 2847967572187549258, guid: e431ba61068fa674782ee7205e0de2bd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2847967572187549258, guid: e431ba61068fa674782ee7205e0de2bd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3377336664000648986, guid: e431ba61068fa674782ee7205e0de2bd, type: 3}
+      propertyPath: m_Name
+      value: PickUp3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616417634732749531, guid: e431ba61068fa674782ee7205e0de2bd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616417634732749531, guid: e431ba61068fa674782ee7205e0de2bd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 9086767405380497412, guid: e431ba61068fa674782ee7205e0de2bd, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9086767405380497412, guid: e431ba61068fa674782ee7205e0de2bd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.0825148
+      objectReference: {fileID: 0}
+    - target: {fileID: 9086767405380497412, guid: e431ba61068fa674782ee7205e0de2bd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.3129025
+      objectReference: {fileID: 0}
+    - target: {fileID: 9086767405380497412, guid: e431ba61068fa674782ee7205e0de2bd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.5479918
+      objectReference: {fileID: 0}
+    - target: {fileID: 9086767405380497412, guid: e431ba61068fa674782ee7205e0de2bd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9086767405380497412, guid: e431ba61068fa674782ee7205e0de2bd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9086767405380497412, guid: e431ba61068fa674782ee7205e0de2bd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9086767405380497412, guid: e431ba61068fa674782ee7205e0de2bd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9086767405380497412, guid: e431ba61068fa674782ee7205e0de2bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9086767405380497412, guid: e431ba61068fa674782ee7205e0de2bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9086767405380497412, guid: e431ba61068fa674782ee7205e0de2bd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e431ba61068fa674782ee7205e0de2bd, type: 3}
