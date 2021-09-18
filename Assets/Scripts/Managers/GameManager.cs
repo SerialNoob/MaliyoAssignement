@@ -8,10 +8,14 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
+
+        m_carData.Reset();
+
         if (Globals.USE_SEED_GENERATION)
         {
             Random.InitState(Globals.SEED_STRING.GetHashCode());
         }
+
     }
 
     public void ComputeCollision()
@@ -35,4 +39,5 @@ public class GameManager : MonoBehaviour
             m_carData.RemoveFuelPoint();
         }
     }
+
 }

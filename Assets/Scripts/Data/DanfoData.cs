@@ -7,7 +7,7 @@ public class DanfoData : ScriptableObject
 {
     public float m_fuelLevel = Globals.MAX_FUEL;
     public int m_lifeCount = 3; 
-    public float m_fuelMileage; // every specified second one unit of fuel is consumed
+    public float m_fuelMileage = Globals.Fuel_CONSUMPTIONTIME; // every specified second one unit of fuel is consumed
 
     public void RemoveFuelPoint()
     {
@@ -28,5 +28,10 @@ public class DanfoData : ScriptableObject
     }
 
     
-    
+    public void Reset()
+    {
+        m_fuelLevel=Globals.MAX_FUEL;
+        m_lifeCount=3;
+        m_fuelMileage=Globals.Fuel_CONSUMPTIONTIME;
+    }
 }
