@@ -1,13 +1,21 @@
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Analytics;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public DanfoData m_carData;
 
     public UnityEvent OnGameEnd;
+    public UnityEvent OnGameStart;
+    public UnityEvent<float> OnScoreAvailable;
+    public UnityEvent<string> OnAchievementAvailable;
 
     private float m_trackedTime;
+    private float m_mileage;
+    private bool m_edgingRefuel;
     // Start is called before the first frame update
     void Awake()
     {
@@ -19,6 +27,8 @@ public class GameManager : MonoBehaviour
             Random.InitState(Globals.SEED_STRING.GetHashCode());
         }
 
+        m_mileage=0;
+        OnGameStart.Invoke();
     }
 
     public void ComputeCollision()
@@ -29,6 +39,17 @@ public class GameManager : MonoBehaviour
     public void ComputeCollection()
     {
         m_carData.IncreaseFuelPoint();
+        if (m_edgingRefuel)
+        {
+            Debug.Log("Close shave Achievement !");
+            //TODO: GPS Call here
+            OnAchievementAvailable.Invoke(Globals.CLOSESHAVEACHIEVEMENT_ID);
+        }
+    }
+
+    public void ReloadGame()
+    {
+        SceneManager.LoadScene(0);
     }
 
     // Update is called once per frame
@@ -41,15 +62,27 @@ public class GameManager : MonoBehaviour
 
         m_trackedTime+=Time.deltaTime;
 
+        m_edgingRefuel= m_trackedTime>m_carData.m_fuelMileage-.5f &&m_trackedTime<m_carData.m_fuelMileage;
+
         if (m_trackedTime >= m_carData.m_fuelMileage)
         {
-            m_trackedTime=0.0f;
+            
             m_carData.RemoveFuelPoint();
             if (m_carData.GetGameState())
+            {
                 OnGameEnd.Invoke();
+                OnScoreAvailable.Invoke(m_mileage);
+                Analytics.CustomEvent("PartyOver", new Dictionary<string, object>()
+                {
+                    { "Mileage", m_mileage},
+                    { "GameTime", Time.timeSinceLevelLoad },
+                    { "PositionOscreenAtDeath", this.transform.position }
+                });
+            }
+            m_trackedTime=0.0f;
         }
 
-
+        m_mileage+=Time.deltaTime;
     }
 
 }
