@@ -34,4 +34,9 @@ public class DanfoData : ScriptableObject
         m_lifeCount=3;
         m_fuelMileage=Globals.Fuel_CONSUMPTIONTIME;
     }
+
+    public bool GetGameState()
+    {
+        return m_lifeCount>0&&m_fuelLevel>0;
+    }
 }

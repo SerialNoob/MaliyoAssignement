@@ -1,8 +1,11 @@
 using UnityEngine;
+using UnityEngine.Events;
 
 public class GameManager : MonoBehaviour
 {
     public DanfoData m_carData;
+
+    public UnityEvent OnGameEnd;
 
     private float m_trackedTime;
     // Start is called before the first frame update
@@ -31,13 +34,22 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (m_carData == null)
+        {
+            return;
+        }
+
         m_trackedTime+=Time.deltaTime;
 
         if (m_trackedTime >= m_carData.m_fuelMileage)
         {
             m_trackedTime=0.0f;
             m_carData.RemoveFuelPoint();
+            if (m_carData.GetGameState())
+                OnGameEnd.Invoke();
         }
+
+
     }
 
 }

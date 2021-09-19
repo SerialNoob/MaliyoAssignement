@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce2d35c952d3a8f4f8c0835ddf96ca28, type: 3}
   m_Name: DanfoData
   m_EditorClassIdentifier: 
-  m_fuelLevel: 5
-  m_lifeCount: 2
+  m_fuelLevel: 0
+  m_lifeCount: 3
   m_fuelMileage: 5
