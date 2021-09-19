@@ -28,17 +28,18 @@ Life
 
 
 Features : 
-Unity Ads Integration
-Unity Analytics to track events
-Distance traveled 
-Average game time
+Unity Ads Integration : Banner Ads 
+Unity Analytics to track events:
+-Distance traveled 
+-Position at game over 
+
 
 
 Procedural Levels that uses seeds
 Achievements and leaderboards using google play services
 Close shave -successfully refuel by collecting a fuel collectible 0.5 s from running out of fuel 
 leaderboards using google play services
-Distance Traveled 
+Metric used : Distance Traveled 
 
 Room For Improvement : 
 - Pooling and recyclying for spawned objects as opposed to instanciation / destruction
