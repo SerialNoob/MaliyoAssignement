@@ -15,9 +15,9 @@ MonoBehaviour:
   m_CollectibleCount: 5
   m_Obstacles:
   - {fileID: 4515894201023420135, guid: 0218338f798e17c468b00c5533c90c12, type: 3}
-  - {fileID: 5195817996183336998, guid: e4de7b3d5bcb24943b44dd62539d6b4f, type: 3}
-  - {fileID: 3218077014278106895, guid: 3d5c3a15929572345b87201bea551961, type: 3}
-  - {fileID: 7198932248806641669, guid: a312f9faf287d7d468ed233c90e6443b, type: 3}
+  - {fileID: 8147736651612756256, guid: 669ee5bde1aec2e418953a6bc4494a9e, type: 3}
+  - {fileID: 5088092269574786733, guid: 167c234f8d6c04a4c8d6e01da2e1aebc, type: 3}
+  - {fileID: 1165628058394851028, guid: ad1df05e602e02b498e528ff088e9d12, type: 3}
   m_collectible:
   - {fileID: 3377336664000648986, guid: e431ba61068fa674782ee7205e0de2bd, type: 3}
   m_spawnTime: 5

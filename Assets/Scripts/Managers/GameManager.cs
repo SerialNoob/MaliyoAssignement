@@ -29,6 +29,8 @@ public class GameManager : MonoBehaviour
             Random.InitState(Globals.SEED_STRING.GetHashCode());
         }
 
+        Time.timeScale=0;
+
         m_mileage=0;
         OnGameStart.Invoke();
     }
@@ -36,6 +38,11 @@ public class GameManager : MonoBehaviour
     public void ComputeCollision()
     {
         m_carData.RemoveLifePoint();
+    }
+
+    public void StartGame()
+    {
+        Time.timeScale=1;
     }
 
     public void ComputeCollection()
@@ -74,6 +81,7 @@ public class GameManager : MonoBehaviour
             {
                 OnGameEnd.Invoke();
                 OnScoreAvailable.Invoke(m_mileage);
+                Time.timeScale=0;
                 Analytics.CustomEvent("PartyOver", new Dictionary<string, object>()
                 {
                     { "Mileage", m_mileage},

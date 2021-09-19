@@ -60,7 +60,7 @@ public class ObstacleSystem : MonoBehaviour
         var obj = GameObject.Instantiate(_obj) as GameObject;
         if(obj.tag.Equals("Colectible"))
             obj.GetComponent<CollectibleReducer>().Reduce((int)m_gameMode.m_CollectibleCount);
-        obj.transform.position.Set(obj.transform.position.x, obj.transform.position.y, this.transform.position.z);
+        obj.transform.position = new Vector3(obj.transform.position.x, obj.transform.position.y, this.transform.position.z);
     }
 
     private void Reset()
