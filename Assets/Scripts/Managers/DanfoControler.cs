@@ -14,6 +14,7 @@ public class DanfoControler : MonoBehaviour
     public float m_deltaFromStart;
     public float m_speed;
     public AnimationCurve m_speedramp;
+    public AnimationCurve m_collisionramp;
     public bool m_debug;
 
 
@@ -25,6 +26,7 @@ public class DanfoControler : MonoBehaviour
     void Start()
     {
         m_positions=new Vector3[2] { this.transform.position, this.transform.position-new Vector3(m_deltaFromStart, 0, 0) };
+        m_speed=Globals.SPEED;
     }
 
     private void OnDrawGizmos()
@@ -56,6 +58,7 @@ public class DanfoControler : MonoBehaviour
         if (collision.gameObject.tag.Equals("Obstacle"))
         {
             GameObject.Destroy(collision.gameObject);
+            m_rampTime=0;
             if (OnCollision!=null)
                 OnCollision.Invoke();
         }
@@ -79,7 +82,11 @@ public class DanfoControler : MonoBehaviour
         this.transform.position=Vector3.Lerp(this.transform.position, m_positions[m_targetPositionIdx], Time.deltaTime*(Globals.SPEED/2)*m_speedramp.Evaluate(m_rampTime));
         m_rampTime+=Time.deltaTime;
 
-        m_targetPositionIdx=Convert.ToInt16(Input.GetMouseButton(0));
 
+        m_speed=m_collisionramp.Evaluate(m_rampTime);
+
+
+        m_targetPositionIdx=Convert.ToInt16(Input.GetMouseButton(0));
+        Globals.SPEED=m_speed;
     }
 }

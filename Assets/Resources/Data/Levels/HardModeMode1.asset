@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1282890e78989e45868d33812f6cea5, type: 3}
+  m_Name: HardModeMode1
+  m_EditorClassIdentifier: 
+  m_CollectibleCount: 1
+  m_Obstacles:
+  - {fileID: 3218077014278106895, guid: 3d5c3a15929572345b87201bea551961, type: 3}
+  - {fileID: 7198932248806641669, guid: a312f9faf287d7d468ed233c90e6443b, type: 3}
+  m_collectible:
+  - {fileID: 3377336664000648986, guid: e431ba61068fa674782ee7205e0de2bd, type: 3}
+  - {fileID: 4581147202881507525, guid: 435b9f0fc0f28f34b80d55324f4c2fc5, type: 3}
+  m_spawnTime: 1.5
+  m_intermediateSpawnTime: 0.5

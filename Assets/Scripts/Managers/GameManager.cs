@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Analytics;
 using UnityEngine.Events;
@@ -12,6 +13,7 @@ public class GameManager : MonoBehaviour
     public UnityEvent OnGameStart;
     public UnityEvent<float> OnScoreAvailable;
     public UnityEvent<string> OnAchievementAvailable;
+    public TextMeshProUGUI m_displayText;
 
     private float m_trackedTime;
     private float m_mileage;
@@ -62,7 +64,7 @@ public class GameManager : MonoBehaviour
 
         m_trackedTime+=Time.deltaTime;
 
-        m_edgingRefuel= m_trackedTime>m_carData.m_fuelMileage-.5f &&m_trackedTime<m_carData.m_fuelMileage;
+        m_edgingRefuel= m_trackedTime>m_carData.m_fuelMileage-.5f && m_trackedTime<m_carData.m_fuelMileage && m_carData.m_fuelLevel<2;
 
         if (m_trackedTime >= m_carData.m_fuelMileage)
         {
@@ -83,6 +85,7 @@ public class GameManager : MonoBehaviour
         }
 
         m_mileage+=Time.deltaTime;
+        m_displayText.text=((int)m_mileage).ToString();
     }
 
 }

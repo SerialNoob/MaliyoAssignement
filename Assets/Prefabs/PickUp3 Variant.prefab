@@ -33,7 +33,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3377336664000648986, guid: e431ba61068fa674782ee7205e0de2bd, type: 3}
       propertyPath: m_Name
-      value: PickUp3
+      value: PickUp3 Variant
       objectReference: {fileID: 0}
     - target: {fileID: 3616417634732749531, guid: e431ba61068fa674782ee7205e0de2bd, type: 3}
       propertyPath: m_LocalPosition.x
