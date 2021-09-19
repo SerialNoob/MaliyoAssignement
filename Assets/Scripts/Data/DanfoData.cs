@@ -37,6 +37,6 @@ public class DanfoData : ScriptableObject
 
     public bool GetGameState()
     {
-        return m_lifeCount>0&&m_fuelLevel>0;
+        return m_lifeCount==0&&m_fuelLevel==0;
     }
 }
